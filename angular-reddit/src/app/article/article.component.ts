@@ -3,27 +3,27 @@ import { Article } from './article.model';
 
 @Component({
   selector: 'app-article',
+  imports: [],
   templateUrl: './article.component.html',
-  styleUrls: ['./article.component.css']
+  styleUrl: './article.component.css'
 })
 export class ArticleComponent implements OnInit {
   @HostBinding('attr.class') cssClass = 'card';
-  article: Article;
+  article:Article
 
   constructor() {
-    this.article = new Article('Angular 2', 'http://angular.io', 10);
+    this.article = new Article('Angular 2','http://angular.io',10);
   }
 
-  voteUp(): boolean {
-    this.article.voteUp();
+  voteUp(): Boolean {
+    this.article.voteUp(); //Modificato qui 
     return false;
   }
 
-  voteDown(): boolean {
-    this.article.voteDown();
+  voteDown():Boolean {
+    this.article.voteDown(); //Modificato qui
     return false;
   }
 
-  ngOnInit(): void {}
+  ngOnInit() {}
 }
-
